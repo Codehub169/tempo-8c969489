@@ -13,6 +13,12 @@ echo "Installing project dependencies..."
 npm install
 
 # Inform the user
+echo "Clearing Next.js cache..."
+
+# Remove the .next directory to ensure a clean build
+rm -rf .next
+
+# Inform the user
 echo "Starting the development server on port 9000..."
 
 # Run the development server
