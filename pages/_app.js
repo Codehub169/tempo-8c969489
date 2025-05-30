@@ -18,7 +18,7 @@ const inter = Inter({
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className={`${poppins.variable} ${inter.variable} font-sans`}>
+    <div className={`${poppins.variable} ${inter.variable} font-sans bg-brand-background`}>
       <Component {...pageProps} />
       <Analytics />
     </div>

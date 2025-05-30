@@ -3,36 +3,12 @@
 @tailwind utilities;
 
 @layer base {
-  @font-face {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(/fonts/Inter-Regular.woff2) format('woff2');
-  }
-
-  @font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 500; /* Medium */
-    font-display: swap;
-    src: url(/fonts/Poppins-Medium.woff2) format('woff2');
-  }
-
-  @font-face {
-    font-family: 'Poppins';
-    font-style: normal;
-    font-weight: 600; /* SemiBold */
-    font-display: swap;
-    src: url(/fonts/Poppins-SemiBold.woff2) format('woff2');
-  }
-
   html {
     scroll-behavior: smooth;
   }
 
   body {
-    @apply bg-off-White text-charcoal antialiased font-sans;
+    @apply bg-brand-background text-brand-text antialiased font-sans;
     font-feature-settings: 'liga' 1, 'calt' 1; /* Enable ligatures and contextual alternates */
   }
 
@@ -42,16 +18,16 @@
   }
 
   ::-webkit-scrollbar-track {
-    background: theme('colors.neutral.light'); /* Using a light neutral from palette, assuming neutral.light or similar exists or adjust */
+    background: theme('colors.brand.secondary'); /* Updated to use brand.secondary */
   }
 
   ::-webkit-scrollbar-thumb {
-    background: theme('colors.primary.DEFAULT'); /* Using primary color from palette */
+    background: theme('colors.brand.primary'); /* Updated to use brand.primary */
     border-radius: 4px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background: theme('colors.primary.dark'); /* Assuming a darker shade for hover, adjust if needed */
+    background: theme('colors.brand.accent'); /* Updated to use brand.accent for hover */
   }
 }
 
