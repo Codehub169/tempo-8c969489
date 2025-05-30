@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(/fonts/Inter-Regular.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500; /* Medium */
+    font-display: swap;
+    src: url(/fonts/Poppins-Medium.woff2) format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600; /* SemiBold */
+    font-display: swap;
+    src: url(/fonts/Poppins-SemiBold.woff2) format('woff2');
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-off-White text-charcoal antialiased font-sans;
+    font-feature-settings: 'liga' 1, 'calt' 1; /* Enable ligatures and contextual alternates */
+  }
+
+  /* Custom scrollbar for a more branded feel - Webkit only */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: theme('colors.neutral.light'); /* Using a light neutral from palette, assuming neutral.light or similar exists or adjust */
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: theme('colors.primary.DEFAULT'); /* Using primary color from palette */
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: theme('colors.primary.dark'); /* Assuming a darker shade for hover, adjust if needed */
+  }
+}
+
+/* Add any global component styles or utilities here if needed */
